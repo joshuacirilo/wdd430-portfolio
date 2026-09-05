@@ -1,5 +1,27 @@
 import ProjectList from "@/components/ProjectList";
 
+const projects = [
+  {
+    title: "Portfolio Foundation",
+    description:
+      "A Next.js app structure with reusable components, shared layout, and Tailwind CSS styling.",
+    technologies: ["Next.js", "Tailwind CSS", "TypeScript"],
+  },
+  {
+    title: "Hello API Route",
+    description:
+      "A simple route handler that returns JSON from the app router API folder.",
+    technologies: ["Next.js App Router", "Route Handler", "JSON"],
+    link: "/api/hello",
+  },
+  {
+    title: "About Page",
+    description:
+      "A dedicated route for introducing the developer and the purpose of the portfolio.",
+    technologies: ["React", "File-based Routing", "Tailwind CSS"],
+  },
+];
+
 export default function Home() {
   return (
     <div className="bg-zinc-50 dark:bg-black">
@@ -18,7 +40,7 @@ export default function Home() {
         </div>
       </section>
       <section className="mx-auto w-full max-w-5xl px-6 pb-16">
-        <ProjectList />
+        <ProjectList projects={projects} />
       </section>
     </div>
   );
