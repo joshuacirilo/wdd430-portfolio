@@ -1,6 +1,13 @@
 import ProjectCard from "./ProjectCard";
 
-const projects = [
+type Project = {
+  title: string;
+  description: string;
+  href: string;
+  tags: string[];
+};
+
+const defaultProjects: Project[] = [
   {
     title: "Portfolio Foundation",
     description:
@@ -24,7 +31,11 @@ const projects = [
   },
 ];
 
-export default function ProjectList() {
+type ProjectListProps = {
+  projects?: Project[];
+};
+
+export default function ProjectList({ projects = defaultProjects }: ProjectListProps) {
   return (
     <section className="grid gap-5 md:grid-cols-3">
       {projects.map((project) => (
