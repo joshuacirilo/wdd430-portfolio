@@ -1,5 +1,21 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+## Assignment Submission
+
+- Deployed Vercel application: TODO: add your Vercel URL
+- GitHub repository: TODO: add your GitHub repository URL
+- Custom component: `SkillCard.tsx` displays a styled list of technical skills and concepts being practiced in this portfolio.
+
+### Questions
+
+**What is the purpose of `app/layout.tsx` in the Next.js App Router?**
+
+`app/layout.tsx` defines the shared page structure for the app, such as the HTML shell, metadata, fonts, header, footer, and global styles. It wraps route pages so common UI and configuration do not need to be repeated.
+
+**Why are the components in this assignment Server Components rather than Client Components?**
+
+They are Server Components because they render static content and props without browser-only interactivity, state, or event handlers. This keeps the page simpler and lets Next.js render the UI on the server by default.
+
 ## Getting Started
 
 First, run the development server:
